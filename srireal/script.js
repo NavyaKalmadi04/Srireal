@@ -3,7 +3,7 @@ function updateNavbarHeading() {
   const headings = {
     home: 'Sri Sarojini High School',
     about: 'About Us',
-    curriculum:'Curriculum & Co-curriculum',
+    curriculum: 'Curriculum & Co-curriculum',
     alumni: 'Alumni',
     contact: 'Contact Us'
   };
