@@ -407,6 +407,7 @@ img {
 
 .school-logo {
   height: 100px;
+  width:70px;
   margin-right: 20px;
   border-radius: 50%;
 }
@@ -446,7 +447,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: Arial, sans-serif;
+  font-family: semi-serif;
   background-color: #fbf9f9;
   margin: 0;
   padding: 0;
@@ -554,7 +555,7 @@ body {
 /* Custom positioning to achieve sinusoidal effect */
 .card1:nth-child(1) {
   grid-column: 1 / 2;
-  transform: translateY(-50px);
+  transform: translateY(-70px);
 }
 
 .card1:nth-child(2) {
