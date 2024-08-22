@@ -150,13 +150,6 @@
   object-fit: cover;
 }
 
-/* Additional Spacing Adjustments */
-.container-fluid,
-.container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 /* Additional Styling to Avoid Space at Bottom */
 .section {
   padding: 0;
@@ -200,16 +193,20 @@ body {
   border-radius: 8px;
 }
 
+.container1.contact-us {
+  min-height: unset;
+}
+
 .curriculum-section {
+  width: 100%;
+  /* height: 100%; */
   background-color: #eea6ca;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 40%;
-  height: 60%;
-  position: absolute;
-  right: 55%;
-  bottom: -80%;
+  /* position: absolute; */
+  /* right: 55%; */
+  /* bottom: -80%; */
 }
 
 .card {
@@ -254,14 +251,14 @@ body {
 }
 
 .images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* gap: 10px; */
   margin-right: 20px;
   margin-left: 50px;
-  position: absolute;
-  left: 60%;
-  bottom: -60%;
+  /* position: absolute; */
+  /* left: 60%;
+  bottom: -60%; */
 
 }
 
@@ -275,24 +272,6 @@ img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 
-}
-
-.rotate1 {
-  transform: rotate(-15deg);
-}
-
-.rotate2 {
-  transform: rotate(15deg);
-}
-
-
-
-.rotate4 {
-  transform: rotate(15deg);
-}
-
-.rotate5 {
-  transform: rotate(-15deg);
 }
 
 /*alumni css*/
@@ -328,7 +307,7 @@ img {
   height: 0;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.7);
-  transition: height 0.3s ease;
+  transition: height 0.3s ease-in-out;
 }
 
 .page4-card-content {
@@ -363,7 +342,7 @@ img {
   margin-top: 20px;
 }
 
-.contact-us {
+/* .contact-us {
   margin: 2em auto;
   background-color: #ffe6e6;
   padding: 20px;
@@ -372,7 +351,7 @@ img {
   max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-}
+} */
 
 .contact-title {
   display: flex;
@@ -411,28 +390,29 @@ img {
   border-radius: 50%;
 }
 
-.details ul {
+.footer-details ul {
   list-style: none;
   padding: 0;
   margin: 0;
   align-items: normal;
 }
 
-.details ul li {
+.footer-details ul li {
   display: flex;
   align-items: normal;
   margin: 10px 0;
   color: #333;
 }
 
-.details ul li i {
+.footer-details ul li i {
   margin-right: 10px;
   font-size: 1.2em;
   color: #0f0703;
   align-items: normal;
 }
 
-.details ul li span {
+.footer-details ul li div {
+  width: max-content;
   font-size: 1.1em;
   align-items: normal;
 }
@@ -461,20 +441,11 @@ body {
   color: #333;
 }
 
-.details {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-  justify-items: center;
-  align-items: center;
-  position: relative;
-}
-
 .card1 {
   text-align: center;
-  width: 180px;
+  /* width: 130px; */
   /* Slightly reduced width */
-  height: 40px;
+  /* height: 40px; */
   /* Slightly reduced height */
   position: relative;
   transition: transform 0.3s ease, height 0.3s ease;
@@ -496,17 +467,17 @@ body {
   /* Reduced padding */
   background-color: rgba(152, 149, 149, 0.826);
   border-radius: 2px;
-  width: 90%;
+  width: 50%;
   text-align: center;
   color: white;
   height: 40px;
   /* Initial smaller height */
   overflow: hidden;
   position: absolute;
-  top: 190px;
+  /* top: 190px; */
   /* Positioned below the image initially */
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   display: flex;
   flex-direction: column;
   /* Stack content vertically */
@@ -542,7 +513,7 @@ body {
   /* Expanded height on hover */
   top: 100px;
   border-radius: 20px;
-  width: 210px;
+  /* width: 210px; */
   /*  Adjusted to move the card upwards, overlapping the lower 50% of the image*/
 }
 
@@ -552,7 +523,7 @@ body {
 }
 
 /* Custom positioning to achieve sinusoidal effect */
-.card1:nth-child(1) {
+/* .card1:nth-child(1) {
   grid-column: 1 / 2;
   transform: translateY(-50px);
 }
@@ -575,7 +546,7 @@ body {
 .card1:nth-child(5) {
   grid-column: 5 / 6;
   transform: translateY(-20px);
-}
+} */
 
 body {
   font-family: Arial, sans-serif;
@@ -669,13 +640,87 @@ body {
 .footer {
   margin-top: 20px;
   font-size: 14px;
-  color: #555;
+  color: #333;
   text-align: center;
   padding: 10px;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   border-radius: 0 0 8px 8px;
 }
 
 #navbarNav {
   font-size: 1.2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  background-color: #FF5252;
+}
+
+#navbar-heading {
+  transition: all 0.3s ease;
+}
+
+.rotate1 {
+  transform: rotate(-15deg);
+  width: 20vw;
+}
+
+.rotate2 {
+  transform: rotate(15deg);
+  width: 20vw;
+}
+
+.rotate4 {
+  width: 20vw;
+  transform: rotate(15deg);
+}
+
+.rotate5 {
+  width: 20vw;
+  transform: rotate(-15deg);
+}
+
+@media (max-width: 576px) { 
+  .container1{
+    min-height: unset;
+  }
+  section{
+    min-height: unset;
+  }
+  .rotate1 {
+    transform: rotate(-15deg);
+    width: 35vw;
+  }
+  
+  .rotate2 {
+    transform: rotate(15deg);
+    width:35vw;
+  }
+  
+  .rotate4 {
+    width: 35vw;
+    transform: rotate(15deg);
+  }
+  
+  .rotate5 {
+    width: 35vw;
+    transform: rotate(-15deg);
+  }
+
+  #navbar-heading{
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px){
+  #mainCarousel{
+    height: unset !important;
+  }
+
+  #navbar-heading{
+    font-size: 2rem;
+  }
 }
