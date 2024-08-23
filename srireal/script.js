@@ -51,6 +51,10 @@ function main() {
       // }
     });
   });
+  document.getElementById('nav-link-home').addEventListener('click', ()=>{
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0;
+  })
 
   // document.getElementById('navbar-brand')
   document.getElementsByClassName('navbar-brand')[0].addEventListener('click', () => {
