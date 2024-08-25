@@ -77,6 +77,7 @@
 .navbar-brand img {
   height: 60px;
   margin-right: 10px;
+  border-radius:50px;
 }
 
 /* Navbar Items Container */
@@ -517,6 +518,10 @@ body {
   transition: height 0.3s ease, top 0.3s ease;
   white-space: nowrap;
   /* Prevent line breaks initially */
+}
+.photo1{
+  position:absolute;
+  top:50%;
 }
 
 .card1 .info p {
