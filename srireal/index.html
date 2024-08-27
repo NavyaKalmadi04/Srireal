@@ -12,7 +12,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -21,11 +20,12 @@
         <marquee>Admissions Are Open Now...!</marquee>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand">
             <img src="logo.jpeg" alt="School Logo" class="d-inline-block align-top">
-
-            <span id="navbar-heading">Sri Sarojini High School</span>
-
+            <div style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                <span id="navbar-heading">Sri Sarojini High School</span>
+                <!-- <span id="navbar-sub-heading">Sri Sarojini High School</span> -->
+            </div>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -34,17 +34,14 @@
         </button>
         <div class="collapse navbar-collapse font-4" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item5">
-                    <a class="nav-link btn btn-secondary" href="#home">Home</a>
-                </li>
                 <li class="nav-item4">
-                    <a class="nav-link btn btn-secondary" href="#curriculum">Curriculum & Co-curriculum</a>
+                    <a id="nav-link-home" class="btn btn-secondary">Home</a>
                 </li>
                 <li class="nav-item3">
-                    <a class="nav-link btn btn-secondary" href="#alumni">Alumni</a>
+                    <a class="nav-link btn btn-secondary" href="#curriculum">Curriculum & Co-curriculum</a>
                 </li>
                 <li class="nav-item2">
-                    <a class="nav-link btn btn-secondary" href="#about">About Us</a>
+                    <a class="nav-link btn btn-secondary" href="#alumni">Alumni</a>
                 </li>
                 <li class="nav-item1">
                     <a class="nav-link btn btn-secondary" href="#contact">Contact Us</a>
@@ -53,7 +50,7 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <section id="home" class="section">
+        <section id="home">
             <div class="container-fluid">
                 <div id="mainCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -96,141 +93,160 @@
             </div>
         </section>
     </div>
-    <!---<div class="bar">
-        <h2><img src="F:\logocurric.jpeg" width="40px">Curriculum And Co-Curriculum</h2>
-    </div>--->
-    <div class="container-fluid">
+    <div class="container-fluid px-0">
         <section id="curriculum" class="section">
-            <div class="container1">
-                <div class="curriculum-container">
-                    <div class="curriculum-section">
-                        <div class="content">
-                            <div class="points">
-                                <ul>
-                                    <li><span class="triangle"></span> Zero point</li>
-                                    <li><span class="triangle"></span> First point</li>
-                                    <li><span class="triangle"></span> Second point</li>
-                                    <li><span class="triangle"></span> Third point</li>
-                                    <li><span class="triangle"></span> Fourth point</li>
-                                    <li><span class="triangle"></span> Fifth point</li>
-                                    <li><span class="triangle"></span> Sixth point</li>
-                                </ul>
+            <div class="section-wrapper">
+                <div class="container1">
+                    <div class="row ">
+                        <div class="col-sm-6 py-4">
+                            <div class="curriculum-section">
+                                <div class="content">
+                                    <div class="points">
+                                        <ul>
+                                            <li><span class="triangle"></span> Zero point</li>
+                                            <li><span class="triangle"></span> First point</li>
+                                            <li><span class="triangle"></span> Second point</li>
+                                            <li><span class="triangle"></span> Third point</li>
+                                            <li><span class="triangle"></span> Fourth point</li>
+                                            <li><span class="triangle"></span> Fifth point</li>
+                                            <li><span class="triangle"></span> Sixth point</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="images">
-                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate1">
-                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate2">
-                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate4">
-                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate5">
-
+                        <div class="col-sm-6 py-4">
+                            <div>
+                                <div class="row mt-5">
+                                    <div class="col-6">
+                                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate1">
+                                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate4">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate2">
+                                        <img src="slido1.jfif" alt="Curriculum Image" class="rotate5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
     <section id="alumni" class="section">
-
         <body>
             <h1 style="background-image:url('slido3.jfif');"></h1>
-            <div class="container1">
-                <div class="alumni-details">
-                    <br><br>
-                    <div class="details">
-                        <div class="card1">
-                            <div class="photo1">
-                            <img src="image2.jpeg" alt="John Doe" class="round-img">
-                            <div class="info">
-                                <p>John Doe</p>
-                                <p class="additional-info">CEO of Tech Innovations</p>
+            <div class="section-wrapper">
+                <div class="container1">
+                    <div class="alumni-details">
+                        <br><br>
+                        <div class="row">
+                            <div class="card1 col-md-4">
+                                <img src="image2.jpeg" alt="John Doe" class="round-img">
+                                <div class="info-container">
+                                    <div class="info">
+                                        <p>John Doe</p>
+                                        <p class="additional-info">CEO of Tech Innovations</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        </div>
-                        <div class="card1">
-                            <img src="image3.jpeg" alt="Jane Smith" class="round-img">
-                            <div class="info">
-                                <p>Jane Smith</p>
-                                <p class="additional-info">Renowned Cardiologist</p>
+                            <div class="card1 col-md-4">
+                                <img src="image3.jpeg" alt="Jane Smith" class="round-img">
+                                <div class="info-container">
+                                    <div class="info">
+                                        <p>Jane Smith</p>
+                                        <p class="additional-info">Renowned Cardiologist</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card1">
-                            <img src="image4.jpeg" alt="Emily Johnson" class="round-img">
-                            <div class="info">
-                                <p>Emily Johnson</p>
-                                <p class="additional-info">Professor at Harvard University</p>
+                            <div class="card1 col-md-4">
+                                <img src="image4.jpeg" alt="Emily Johnson" class="round-img">
+                                <div class="info-container">
+                                    <div class="info">
+                                        <p>Emily Johnson</p>
+                                        <p class="additional-info">Professor at Harvard University</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card1">
-                            <img src="image5.jpeg" alt="John Doe" class="round-img">
-                            <div class="info">
-                                <p>John Doe</p>
-                                <p class="additional-info">CEO of Tech Innovations</p>
+                            <div class="card1 col-md-6">
+                                <img src="image5.jpeg" alt="John Doe" class="round-img">
+                                <div class="info-container">
+                                    <div class="info">
+                                        <p>John Doe</p>
+                                        <p class="additional-info">CEO of Tech Innovations</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card1">
-                            <img src="image6.jpeg" alt="Jane Smith" class="round-img">
-                            <div class="info">
-                                <p>Jane Smith</p>
-                                <p class="additional-info">Renowned Cardiologist</p>
+                            <div class="card1 col-md-6">
+                                <img src="image6.jpeg" alt="Jane Smith" class="round-img">
+                                <div class="info-container">
+                                    <div class="info">
+                                        <p>Jane Smith</p>
+                                        <p class="additional-info">Renowned Cardiologist</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
     </section>
 
-    <section id="about" class="section">
-        <div class="container1">
-            <div class="content">
-                <div class="profile">
-                    <img src="chairman.jfif" alt="Dr. V. Jayachandra Reddy">
-                    <div class="profile-info">
-                        <h2>Dr. V. Jayachandra Reddy</h2>
-                        <p>Chairman</p>
+    <section id="contact" class="section">
+        <div class="section-wrapper">
+            <div class="container1 contact-us">
+                <div class="content">
+                    <div class="profile">
+                        <img src="chairman.jfif" alt="Dr. V. Jayachandra Reddy">
+                        <div class="profile-info">
+                            <h2>Dr. V. Jayachandra Reddy</h2>
+                            <p>Chairman</p>
+                        </div>
                     </div>
-                </div>
-                <div class="message-box">
-                    <h3>Chairman's Message</h3>
-                    <p>Welcome to Sri Sarojini High School, where we are dedicated to fostering a community of lifelong
-                        learners. Our mission is to provide a high-quality education that inspires students to achieve
-                        academic excellence, develop critical thinking skills, and become responsible, engaged citizens.
-                    </p>
-                </div>
-            </div>
-            <div class="contact-us">
-                <div class="contact-details">
-                    <!--<button class="menu-btn"><i class="fas fa-bars"></i></button>--->
-                    <p>Welcome to Sri Sarojini High School, where we are dedicated to fostering a community of lifelong
-                        learners. Our mission is to provide a high-quality education that inspires students to achieve
-                        academic excellence.</p>
-                    <div class="details">
-                        <img src="logo.jpeg" alt="school logo" class="school-logo">
-                        <ul>
-                            <li>
-                                <i class="fas fa-school"></i>
-                                <span>Sri Sarojini High School</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Vasantapeta, near municipal park, Proddatur</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <span>9924145241</span>
-                            </li>
-                        </ul>
+                    <div class="message-box">
+                        <h3>Chairman's Message</h3>
+                        <p>Welcome to Sri Sarojini High School, where we are dedicated to fostering a community of
+                            lifelong
+                            learners. Our mission is to provide a high-quality education that inspires students to
+                            achieve
+                            academic excellence, develop critical thinking skills, and become responsible, engaged
+                            citizens.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="footer">
-        © 2024 Sri Sarojini High School. All rights reserved.
-    </div>
+    <footer class="pt-4 mt-md-5 pt-md-5 border-top">
+        <div class="row mx-sm-5">
+            <div class="col-sm-10">
+                <div class="footer-details">
+                    <ul>
+                        <li>
+                            <i class="fas fa-school"></i>
+                            <div>Sri Sarojini High School</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Vasantapeta, near municipal park, Proddatur</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>9924145241</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-img" class="col-sm-2">
+                <img src="logo.jpeg" alt="school logo" class="school-logo">
+            </div>
+        </div>
+        <div class="footer">
+            © 2024 Sri Sarojini High School. All rights reserved.
+        </div>
+    </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
