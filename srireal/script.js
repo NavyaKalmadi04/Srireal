@@ -35,15 +35,15 @@ function main() {
   // Event listeners for nav links to update heading when clicked
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-      const headingElement = document.getElementById('navbar-heading');
-      if (headingElement.textContent == headings[currentSectionGlobal]) {
-        headingElement.style.fontSize = '3.5rem';
-        headingElement.style.color = '#444';
-        setTimeout(function () {
-          headingElement.style.fontSize = '3rem';
-          headingElement.style.color = 'black';
-        }, 500);
-      }
+      // const headingElement = document.getElementById('navbar-heading');
+      // if (headingElement.textContent == headings[currentSectionGlobal]) {
+      //   headingElement.style.fontSize = '3.5rem';
+      //   headingElement.style.color = '#444';
+      //   setTimeout(function () {
+      //     headingElement.style.fontSize = '3rem';
+      //     headingElement.style.color = 'black';
+      //   }, 500);
+      // }
       setTimeout(updateNavbarHeading, 500);
       // if (!clickRefreshed) {
 
